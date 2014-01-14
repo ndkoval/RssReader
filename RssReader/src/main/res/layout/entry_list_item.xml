@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/web_link"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/abc_list_selector_holo_light">
+
+            <ImageView
+                android:paddingLeft="14.5dp"
+                android:paddingRight="7dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_web_site"
+                android:duplicateParentState="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="100"
+            android:weightSum="100"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/abc_list_selector_holo_light"
+            android:id="@+id/show_entry">
+
+            <TextView
+                android:layout_weight="100"
+                android:id="@+id/entry_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="7.5dp"
+                android:paddingRight="14.5dp"
+                android:paddingTop="14.5dp"
+                android:paddingBottom="14.5dp"
+                android:minHeight="?android:attr/listPreferredItemHeightSmall"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_action_next_item"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

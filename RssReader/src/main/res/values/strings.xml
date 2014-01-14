@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RSS Reader</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="update_feeds">Check new entries</string>
+    <string name="add_feed">Add new RSS feed</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="edit_feed">Edit feed</string>
+    <string name="add_button">Add</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="feed_title">Title</string>
+    <string name="feed_link">Link</string>
+    <string name="ok">OK</string>
+    <string name="update_error">Feeds updating error</string>
+    <string name="update_ok">Feeds are updated</string>
+    <string name="open_in_browser">Open in browser</string>
+    <string name="invalid_link">Invalid link</string>
+    <string name="empty_title">Empty title</string>
+    <string name="invalid_uri">Invalid entry link</string>
+    <string name="first_run_text">Add feeds to start using RSS Reader</string>
+
+</resources>

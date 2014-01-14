@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CategoriesActivity">
+
+    <item
+        android:id="@+id/update_feeds"
+        android:title="@string/update_feeds"
+        android:icon="@drawable/ic_action_refresh"
+        app:showAsAction="always"/>
+
+</menu>
