@@ -403,6 +403,8 @@ public class NavigationDrawerFragment extends Fragment {
                 try {
                     ChannelList.getInstance().add(new Channel(title, new URL(link)));
                     channelAdapter.notifyDataSetInvalidated();
+                    final Intent intent = new Intent(getActivity(), UpdateFeedsIntentService.class);
+                    getActivity().startService(intent);
 //                    selectItem(ChannelList.getInstance().size() - 1);
                     MyApp.restartAlarmManager();
                 } catch (MalformedURLException e) {

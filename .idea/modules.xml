@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RssReader/RssReader.iml" filepath="$PROJECT_DIR$/RssReader/RssReader.iml" />
       <module fileurl="file://$PROJECT_DIR$/RssReaderProject.iml" filepath="$PROJECT_DIR$/RssReaderProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson7.iml" filepath="$PROJECT_DIR$/lesson7.iml" />
     </modules>
   </component>
 </project>

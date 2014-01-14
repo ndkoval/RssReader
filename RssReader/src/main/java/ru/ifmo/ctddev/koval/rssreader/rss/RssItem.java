@@ -44,15 +44,6 @@ public class RssItem {
         return pubDate;
     }
 
-    public void setPubDate(String pubDate) {
-        try {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
-            this.pubDate = dateFormat.parse(pubDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void setPubDate(Date pubDate) {
         this.pubDate = pubDate;
     }

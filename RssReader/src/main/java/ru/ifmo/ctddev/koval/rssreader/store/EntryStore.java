@@ -36,15 +36,18 @@ public class EntryStore {
             writableItems.beginTransaction();
             writableItems.execSQL(deleteSQL);
 
-            for (RssItem item : newItems) {
-                ContentValues values = new ContentValues();
-                values.put(dbOpenHelper.TITLE_COLUMN, item.getTitle());
-                values.put(dbOpenHelper.DESCRIPTION_COLUMN, item.getDescription());
-                values.put(dbOpenHelper.URL_COLUMN, item.getLink());
-                values.put(dbOpenHelper.FEED_ID_COLUMN, feedId);
-                writableItems.insert(dbOpenHelper.DATABASE_TABLE, null, values);
-            }
+            if (newItems != null) {
 
+                for (RssItem item : newItems) {
+                    ContentValues values = new ContentValues();
+                    values.put(dbOpenHelper.TITLE_COLUMN, item.getTitle());
+                    values.put(dbOpenHelper.DESCRIPTION_COLUMN, item.getDescription());
+                    values.put(dbOpenHelper.URL_COLUMN, item.getLink());
+                    values.put(dbOpenHelper.FEED_ID_COLUMN, feedId);
+                    writableItems.insert(dbOpenHelper.DATABASE_TABLE, null, values);
+                }
+
+            }
             writableItems.setTransactionSuccessful();
         } finally {
             writableItems.endTransaction();

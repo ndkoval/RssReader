@@ -3,7 +3,6 @@ package ru.ifmo.ctddev.koval.rssreader;
 import android.app.IntentService;
 import android.content.Intent;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 
 import org.xml.sax.SAXException;
 
@@ -36,17 +35,14 @@ public class UpdateFeedsIntentService extends IntentService {
                 List<RssItem> entries = null;
 
                 HttpURLConnection conn = (HttpURLConnection) channel.getUrl().openConnection();
-                if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                    InputStream is = conn.getInputStream();
+                InputStream is = conn.getInputStream();
 
-                    entries = new AndroidSaxFeedParser(channel.getUrl().toString()).parse();
-                }
+                entries = new AndroidSaxFeedParser(channel.getUrl().toString()).parse();
 
                 EntryStore.getInstance().updateEntries(channel.getId(), entries);
             }
 
-        } catch (SAXException | IOException e) {
-            Log.d("RSS_R", e.getMessage());
+        } catch (IOException | SAXException e) {
             e.printStackTrace();
             broadcastIntent = new Intent(Constants.RECEIVER);
             broadcastIntent.putExtra(Constants.RECEIVER_DATA, Constants.STATUS_ERROR);
